@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uh.tech.cis3368.semesterproject.MainController">
+   <children>
+      <TextField fx:id="jobsFirstNameField" layoutX="37.0" layoutY="224.0" promptText="Customer First Name" />
+      <TextField fx:id="jobsDescriptionField" layoutX="203.0" layoutY="254.0" promptText="Description" />
+      <TextField fx:id="jobsPhoneField" layoutX="37.0" layoutY="291.0" promptText="Phone" />
+      <TextField fx:id="jobsAddressField" layoutX="37.0" layoutY="327.0" promptText="Address" />
+      <ScrollPane layoutX="10.0" layoutY="14.0" prefHeight="200.0" prefWidth="579.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="586.0">
+               <children>
+                  <TableView fx:id="jobsTableView" prefHeight="200.0" prefWidth="579.0">
+                    <columns>
+                      <TableColumn fx:id="jobsIdColumn" prefWidth="46.0" text="Job ID" />
+                      <TableColumn fx:id="jobsFirstNameColumn" prefWidth="74.0" text="Customer First Name" />
+                        <TableColumn fx:id="jobsLastNameColumn" prefWidth="61.0" text="Customer Last Name" />
+                        <TableColumn fx:id="jobsPhoneColumn" prefWidth="57.0" text="Phone" />
+                        <TableColumn fx:id="jobsAddressColumn" prefWidth="64.0" text="Address" />
+                        <TableColumn fx:id="jobsNameColumn" prefWidth="67.0" text="Job Name" />
+                        <TableColumn fx:id="jobsDescriptionColumn" prefWidth="90.0" text="Description" />
+                        <TableColumn fx:id="jobsStageColumn" text="Stage" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="jobsLastNameField" layoutX="37.0" layoutY="254.0" promptText="Customer Last Name" />
+      <TextField fx:id="jobsNameField" layoutX="203.0" layoutY="224.0" promptText="Job Name" />
+      <TextField fx:id="jobsStageField" layoutX="203.0" layoutY="291.0" promptText="Job Stage" />
+      <Button fx:id="addJobButton" layoutX="412.0" layoutY="224.0" mnemonicParsing="false" onAction="#newJobButtonAction" text="Add Job" />
+      <Button layoutX="412.0" layoutY="267.0" mnemonicParsing="false" text="Edit Job" />
+      <Button layoutX="406.0" layoutY="315.0" mnemonicParsing="false" text="Delete Job" />
+   </children>
+</AnchorPane>
